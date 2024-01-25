@@ -1,4 +1,4 @@
-# loginator
+# LOGINATOR1000
 
 ### Rubric (0/50)
 - [ ] Writeup (10)
