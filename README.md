@@ -1,4 +1,4 @@
-# LOGINATOR1000
+# SCRAPERTRON1000, a Python Amazon Web Scraper/Tracker
 
 ### Rubric (0/50)
 - [ ] Writeup (10)
