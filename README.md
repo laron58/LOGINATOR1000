@@ -1,4 +1,12 @@
 ## SCRAPERTRON1000, a Python Amazon Web Scraper/Tracker
+### Usage:
+IMPORTANT!! The file `urls.txt` is an OPTIONAL download with 7 example Amazon links. `scrapertron.py` can work as a standalone program and will create any needed files.
+
+Make sure you `cd` to the correct folder where scrapertron.py is located before running. Otherwise, the program may not be able to read files.
+
+To add links to `urls.txt` via console, use `CTRL + Shift + V` to paste links when prompted.
+
+Always leave an extra empty line at the bottom of the text files so the program can properly append new info.
 
 ### Rubric (0/50)
 - [ ] Writeup (10)
