@@ -8,6 +8,10 @@ To add links to `urls.txt` via console, use `CTRL + Shift + V` to paste links wh
 
 Always leave an extra empty line at the bottom of the text files so the program can properly append new info.
 
+### Dependencies:
+- BeautifulSoup4 `pip install bs4`
+- urllib
+
 ### Rubric (0/50)
 - [ ] Writeup (10)
      - [ ] Research (8)
