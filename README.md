@@ -12,6 +12,12 @@ Always leave an extra empty line at the bottom of the text files so the program 
 - BeautifulSoup4 `pip install bs4`
 - urllib
 
+### Command line:
+- Make sure you `cd` to the correct folder where scrapertron.py is located before running.
+- Enter 0 or 1 to skip first prompt and go straight to scraping/adding urls
+
+`python3 scrapertron.py` `python3 scrapertron.py 0`
+
 ### Rubric (0/50)
 - [ ] Writeup (10)
      - [ ] Research (8)
