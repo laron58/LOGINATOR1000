@@ -1,7 +1,8 @@
 from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup as bsoup
+import sys
 
-def main(status = -1, email = "", eStatus = 1):
+def main(status = -1):
     if status == -1:
         try: status = int(input("Enter 0 to start scraping, Enter 1 to add URLs to list.\n"))
         except ValueError: print("\nEnter a valid number!"); exit()
@@ -48,6 +49,37 @@ def checker(url):
     #Re-formatting price for printing
     print("Current price: $" + f"{price:,{'.2f'}}")
 
+    try:
+        with open("priceLog.txt", "r+", encoding = "utf-8") as log:
+            full = log.read()
+            if title[:64] in full:
+                lines = full.splitlines()
+                #Reverse iteration through log to find most recent matching entry
+                for line in reversed(lines):
+                    #print(line)
+                    if line.find(title[:64]) != -1:
+                        lPrice = float(line.split('|', 1)[1])
+                        #print(lPrice)
+                        if price > lPrice:
+                            print("Price increased by $" + f"{(price - lPrice):,{'.2f'}}" + "!")
+                            log.write(title[:64] + "|" + str(price) + "\n")
+                            break
+                        elif price < lPrice:
+                            print("Price decreased by $" + f"{(lPrice - price):,{'.2f'}}" + "!")
+                            log.write(title[:64] + "|" + str(price) + "\n")
+                            break
+                        else: 
+                            print("No change in price.")
+                            break
+            else: 
+                print("No price history found.")
+                log.write(title[:64] + "|" + str(price) + "\n")
+    except FileNotFoundError:
+        print("No price history found.")
+        #Creates log if it didn't previously exist
+        with open("priceLog.txt", "w", encoding = "utf-8") as log, open("report.txt", "a", encoding = "utf-8") as report:
+            log.write(title[:64] + "|" + str(price) + "\n")
+            
 if __name__ == "__main__":
     #No arguments passed
     if len(sys.argv) == 1:
