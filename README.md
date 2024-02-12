@@ -1,6 +1,6 @@
 ## SCRAPERTRON1000, a Python Amazon Web Scraper/Tracker
 ### Usage:
-IMPORTANT!! The file `urls.txt` is an OPTIONAL download with 7 example Amazon links. `scrapertron.py` can work as a standalone program and will create any needed files.
+IMPORTANT!! The files `urls.txt` and `priceLog.txt` are OPTIONAL downloads with 7 example Amazon links and a few example logs. `scrapertron.py` can work as a standalone program and will create any needed files.
 
 Make sure you `cd` to the correct folder where scrapertron.py is located before running. Otherwise, the program may not be able to read files.
 
