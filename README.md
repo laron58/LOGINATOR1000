@@ -8,6 +8,9 @@ To add links to `urls.txt` via console, use `CTRL + Shift + V` to paste links wh
 
 Always leave an extra empty line at the bottom of the text files so the program can properly append new info.
 
+If you intend to use your own email bot, you will need to use your own email & app password (2fa required).
+(https://support.google.com/accounts/answer/185833?hl=en)
+
 ### Dependencies:
 - BeautifulSoup4 `pip install bs4`
 - urllib
