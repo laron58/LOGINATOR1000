@@ -11,14 +11,18 @@ Always leave an extra empty line at the bottom of the text files so the program 
 ### Dependencies:
 - BeautifulSoup4 `pip install bs4`
 - urllib
+- smtplib
+- datetime
+- sys
 
 ### Command line:
 - Make sure you `cd` to the correct folder where scrapertron.py is located before running.
 - Enter 0 or 1 to skip first prompt and go straight to scraping/adding urls
+- Add your email (2nd arg) to skip email prompt
 
-`python3 scrapertron.py` `python3 scrapertron.py 0`
+`python3 scrapertron.py` `python3 scrapertron.py 0` `python3 scrapertron.py 1 johndoe@gmail.com`
 
-### Rubric (0/50)
+### Rubric (20/50)
 - [ ] Writeup (10)
      - [ ] Research (8)
      - [ ] Works Cited (2)
@@ -26,7 +30,7 @@ Always leave an extra empty line at the bottom of the text files so the program 
      - [ ] Well-Designed Slides (5)
      - [ ] Engaging (10)
      - [ ] Responds to questions well (5)
-- [ ] Program (18)
+- [x] Program (18)
      - [x] Version Control (4)
      - [x] Demonstration (10)
      - [x] Run via comand line and add arguments (4)
