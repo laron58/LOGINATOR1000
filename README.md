@@ -1,4 +1,5 @@
 ## SCRAPERTRON1000, a Python Amazon Web Scraper/Tracker
+
 ### Usage:
 IMPORTANT!! The files `urls.txt` and `priceLog.txt` are OPTIONAL downloads with 7 example Amazon links and a few example logs. `scrapertron.py` can work as a standalone program and will create any needed files.
 
@@ -11,13 +12,6 @@ Always leave an extra empty line at the bottom of the text files so the program 
 If you intend to use your own email bot, you will need to use your own email & app password (2fa required).
 (https://support.google.com/accounts/answer/185833?hl=en)
 
-### Dependencies:
-- BeautifulSoup4 `pip install bs4`
-- urllib
-- smtplib
-- datetime
-- sys
-
 ### Command line:
 - Make sure you `cd` to the correct folder where scrapertron.py is located before running.
 - Enter 0 or 1 to skip first prompt and go straight to scraping/adding urls
@@ -25,6 +19,13 @@ If you intend to use your own email bot, you will need to use your own email & a
 
 `python3 scrapertron.py` `python3 scrapertron.py 0` `python3 scrapertron.py 1 johndoe@gmail.com`
 
+### Dependencies:
+- BeautifulSoup4 `pip install bs4`
+- urllib
+- smtplib
+- datetime
+- sys
+  
 ### Rubric (20/50)
 - [ ] Writeup (10)
      - [ ] Research (8)
