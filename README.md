@@ -26,10 +26,10 @@ If you intend to use your own email bot, you will need to use your own email & a
 - datetime
 - sys
   
-### Rubric (20/50)
-- [ ] Writeup (10)
-     - [ ] Research (8)
-     - [ ] Works Cited (2)
+### Rubric (30/50)
+- [x] Writeup (10)
+     - [x] Research (8)
+     - [x] Works Cited (2)
 - [ ] Presentation (20)
      - [ ] Well-Designed Slides (5)
      - [ ] Engaging (10)
@@ -41,3 +41,5 @@ If you intend to use your own email bot, you will need to use your own email & a
 - [x] README.md (2)
      - [x] Dependencies (1)
      - [x] Commands and arguments to run (1)
+- [x] Extentions (2)
+     - [x] Sends email when alert is triggered (2)
