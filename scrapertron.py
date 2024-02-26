@@ -4,8 +4,10 @@ import smtplib
 from datetime import datetime
 import sys
 
+#Default values if nothing is passed
 def main(status = -1, email = "", eStatus = 1):
     if status == -1:
+        #Prompts for 0/1 if not passed through console
         try: status = int(input("Enter 0 to start scraping, Enter 1 to add URLs to list.\n"))
         except ValueError: print("\nEnter a valid number!"); exit()
     if status == 1:
@@ -34,6 +36,7 @@ def main(status = -1, email = "", eStatus = 1):
                 
                 if email == "0": exit()
                 elif email == "":
+                    #Prompts for 0/1 and email if no email is given via console 
                     try: eStatus = int(input("\nEnter 0 to generate report.txt only, Enter 1 to email report.\n"))
                     except ValueError: print("\nNot a number! Generated report only."); exit()
                 if eStatus == 1:
@@ -65,7 +68,9 @@ def scrape(url):
     try: req = Request(url, headers={'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'})
     except: print("\nInvalid URL found! Terminating..."); exit()
     page = urlopen(req).read().decode('utf-8')
+    #Parses HTML
     soup = bsoup(page, "html.parser")
+    print(type(soup))
 
     #Locating item name
     title = str(soup.find("span", class_ = "a-size-large product-title-word-break"))
@@ -126,14 +131,14 @@ if __name__ == "__main__":
     if len(sys.argv) == 1:
         try: main()
         except KeyboardInterrupt: print("\nTerminating...")
-    #One argument passed
+    #One argument passed (0 or 1)
     elif len(sys.argv) == 2:
         try:
             if int(sys.argv[1]) == 0 or int(sys.argv[1]) == 1:
                 try: main(int(sys.argv[1]))
                 except KeyboardInterrupt: print("\nTerminating...")
         except ValueError: print("Invalid argument!")
-    #Two arguments passed
+    #Two arguments passed (0 or 1 and email)
     elif len(sys.argv) == 3:
         try:
             if int(sys.argv[1]) == 0 or int(sys.argv[1]) == 1:
