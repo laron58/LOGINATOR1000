@@ -70,7 +70,6 @@ def scrape(url):
     page = urlopen(req).read().decode('utf-8')
     #Parses HTML
     soup = bsoup(page, "html.parser")
-    print(type(soup))
 
     #Locating item name
     title = str(soup.find("span", class_ = "a-size-large product-title-word-break"))
