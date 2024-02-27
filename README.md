@@ -26,7 +26,7 @@ If you intend to use your own email bot, you will need to use your own email & a
 - datetime
 - sys
   
-### Rubric (32/50)
+### Rubric (52/50)
 - [x] Writeup (10)
      - [x] Research (8)
      - [x] Works Cited (2)
