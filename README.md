@@ -26,14 +26,14 @@ If you intend to use your own email bot, you will need to use your own email & a
 - datetime
 - sys
   
-### Rubric (30/50)
+### Rubric (32/50)
 - [x] Writeup (10)
      - [x] Research (8)
      - [x] Works Cited (2)
-- [ ] Presentation (20)
-     - [ ] Well-Designed Slides (5)
-     - [ ] Engaging (10)
-     - [ ] Responds to questions well (5)
+- [x] Presentation (20)
+     - [x] Well-Designed Slides (5)
+     - [x] Engaging (10)
+     - [x] Responds to questions well (5)
 - [x] Program (18)
      - [x] Version Control (4)
      - [x] Demonstration (10)
